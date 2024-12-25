@@ -1,13 +1,16 @@
 // ==UserScript==
 // @name         BlokerWeb
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/elstrom/BlokerWeb
 // @version      1.4
 // @description  Auto-close tab jika URL saat ini termasuk dalam daftar blokir atau mengandung kata tertentu.
 // @author       Elstrom
+// @include      *github.com*
+// @exclude      *api.github*
 // @match        *://*/*
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/elstrom/BlokerWeb/blob/main/BlokerWeb.user.js
-// @downloadURL  https://raw.githubusercontent.com/elstrom/BlokerWeb/blob/main/BlokerWeb.user.js
+// @supportURL   https://raw.githubusercontent.com/elstrom/BlokerWeb
+// @updateURL    https://raw.githubusercontent.com/elstrom/BlokerWeb/main/BlokerWeb.user.js
+// @downloadURL  https://raw.githubusercontent.com/elstrom/BlokerWeb/main/BlokerWeb.user.js
 // ==/UserScript==
 
 (function () {
