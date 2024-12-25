@@ -17,70 +17,144 @@
     'use strict';
 
     // Daftar website atau kata yang diblokir
+
     const blokweb = [
+
         "enrtx",
+
         "kelas2.guru",
+
         "meenetiy.com",
+
         "rajapg10.site",
+
         "mordoops",
+
         "s.shopee.co.id",
+
         "mp4k.pro",
+
+        "kotra.id",
+
+        "cps.cotecna.com",
+
+        "online.sim.pktj.ac.id",
+
+        "meenetiy.com",
+
+        "fmars.marssociety.org",
+
+        "851849.visualmirage.co",
+
+        "visualmirage",
+
+        "fmars.marssociety.org",
+
+        "bocoran",
+
+        "kikojogja.com",
+
+        "www.24newstech.com",
+
         "d3h0vqwmcilum.cloudfront.net",
+
         "d37nij3w7aewur.cloudfront.net",
+
         "cloudfront",
+
         "label138p.xyz",
+
         "tokopedia.com",
+
         "shopee.co.id",
+
         "lazada.co.id",
+
         "blibli.com",
+
         "bukalapak.com",
+
         "amazon.com",
+
         "ebay.com",
+
         "alibaba.com",
+
         "aliexpress.com",
+
         "jd.com",
+
         "olx.co.id",
+
         "casino",
+
         "judi",
+
         "poker",
+
         "bet",
+
         "slot",
+
         "roulette",
+
         "togel",
+
         "sbobet",
+
         "qq",
+
         "dingdong",
+
         "dominoqq",
+
         "bandarq",
+
         "aduq",
+
         "capsa",
+
         "baccarat",
+
         "blackjack",
+
         "jackpot",
+
         "maxwin",
+
         "slot88",
+
         "slotgacor",
+
         "pragmaticplay",
+
         "taruhan",
+
         "agenbola",
+
         "judibola",
+
         "judionline"
+
     ];
 
-    // Fungsi untuk memeriksa URL saat ini
+    function closeTab() {
+        window.close();
+    }
+
     function checkBlockedUrl() {
         const currentUrl = window.location.href.toLowerCase();
         const isBlocked = blokweb.some(keyword => currentUrl.includes(keyword));
         if (isBlocked) {
-            window.close();
+            closeTab();
         }
     }
 
-    // Jalankan pengecekan saat skrip pertama kali dijalankan
+    // Cek URL awal
     checkBlockedUrl();
 
-    // Interval untuk memantau perubahan URL pada tab saat ini
-    setInterval(checkBlockedUrl, 2000);
+    // Pantau perubahan URL setiap detik
+    setInterval(checkBlockedUrl, 1000);
 
     // Pantau pembukaan tab baru
     const originalWindowOpen = window.open;
@@ -96,15 +170,21 @@
                         clearInterval(intervalId);
                     }
                 } catch (e) {
-                    // Jika akses URL tab gagal karena alasan keamanan
                     console.error("Tidak dapat memeriksa tab baru:", e);
                 }
-            }, 2000);
+            }, 1000);
         }
         return newTab;
     };
 
-    // Pantau perubahan URL jika tab lama mengarahkan ke halaman dari daftar blokir
+    // Cek navigasi atau perubahan hash
     window.addEventListener("popstate", checkBlockedUrl);
     window.addEventListener("hashchange", checkBlockedUrl);
+
+    // Jika muncul prompt keamanan, gunakan interval agresif untuk menutup
+    setInterval(() => {
+        if (document.title.includes("Situs ini telah dilaporkan sebagai tidak aman")) {
+            closeTab();
+        }
+    }, 500);
 })();

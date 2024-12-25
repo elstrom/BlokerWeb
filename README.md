@@ -29,7 +29,3 @@ Daftar situs mencakup:
 
 - Skrip akan berjalan di semua situs dan memblokir tab yang masuk dalam daftar blokir.
 - Jika ada situs yang perlu ditambahkan, Anda bisa memperbarui daftar blokir langsung pada file `.user.js`.
-
-## 📝 Lisensi
-
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
