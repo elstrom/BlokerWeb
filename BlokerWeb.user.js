@@ -38,9 +38,17 @@
 
         "cps.cotecna.com",
 
+        "s.viisscos.com",
+
+        "irispublishers.com",
+
+        "dpu.brebeskab.go.id",
+        
+        "orantesjonnock.",
+
         "online.sim.pktj.ac.id",
 
-        "meenetiy.com",
+        "meenetiy",
 
         "fmars.marssociety.org",
 
