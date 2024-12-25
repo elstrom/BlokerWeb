@@ -34,6 +34,14 @@
 
         "mp4k.pro",
 
+        "temansenang.pro",
+
+        "zabaidsoacmaimt.com",
+
+        "berlagu.com",
+
+        "metrolagu.com",
+
         "kotra.id",
 
         "cps.cotecna.com",
