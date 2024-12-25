@@ -42,6 +42,10 @@
 
         "metrolagu.com",
 
+        "koimarindal.com",
+
+        "exoguyub.com",
+
         "kotra.id",
 
         "cps.cotecna.com",
